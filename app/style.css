@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #F8F9FA;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+.large {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.small {
+  font-size: 0.8rem;
+  color: #161616a9;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.menu-toggle {
+  position: fixed;
+  z-index: 9999;
+  right: 5%;
+  top: 4rem;
+  width: 4rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: 0.5s;
+}
+
+.menu-toggle span {
+  background: #2d2d2d;
+  width: 100%;
+  height: 4px;
+  transition: 0.5s ease;
+}
+
+.menu-toggle.active span {
+  background: #FFFF;
+}
+
+.menu-toggle span:nth-child(2) {
+  width: 70%;
+}
+
+.menu-toggle span:nth-child(3) {
+  width: 40%;
+}
+
+
+.menu-toggle.active span:nth-child(2) {
+  width: 100%;
+
+}
+
+.menu-toggle.active span:nth-child(3) {
+  width: 100%;
+}
+
+
+
+/* nav */
+
+nav {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.nav.active {
+  pointer-events: auto;
+}
+
+.nav-left { 
+  position: relative;
+  z-index: 10;
+  left: -75%;
+  top: 0;
+  width: 75%;
+  height: 100vh;
+  background-color: #FFFF;
+  transition: 0.8s;
+}
+
+.nav-left.active {
+  left: 0;
+  transition: 0.5s;
+}
+
+.nav-left ul {
+  position: relative;
+  top: 35%;
+  left: 10%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.nav-right {
+  position: absolute;
+  z-index: 9;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  transition: 0.8s;
+}
+
+.nav-right.active {
+  left: 50%;
+  transition: 0.5s;
+}
+
+.nav-link {
+  opacity: 0;
+  position: relative;
+  left: -10%;
+}
+
+.nav-link.active {
+  opacity: 1;
+  transition: 0.5s;
+  left: 0;
+}
+
+.contact {
+  position: absolute;
+  opacity: 0;
+  bottom: 10%;
+  left: 0;
+  pointer-events: none;
+}
+
+.contact.active {
+  opacity: 1;
+  left: 10%;
+  transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+.scene,
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(1);
+}
+
+.please {
+  background-color: #212529;
+  width: 100%;
+  height: 100vh;
+}
+
+.cont {
+  display: block;
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}
+.cont svg {
+  display: block;
+}
+
+.q-scrol {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/* temp */
+.logo {
+  background-color: #2d2d2d;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8rem;
+  width: 8rem;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoT {
+  color: white;
+}
